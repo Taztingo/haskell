@@ -13,6 +13,11 @@ safeLast :: [a] -> Maybe a
 safeLast [] = Nothing
 safeLast (xs) = safeHead (reverse xs)
 
+myInit :: [a] -> [a]
+myInit [] = []
+myInit (x:xs) = if (null xs)
+                  then []
+                  else x : (myInit xs)
+
 safeInit :: [a] -> Maybe [a]
-safeInit [] = Nothing
-safeInit (xs) = Just (init xs)
+safeInit xs = Just(myInit xs)
