@@ -16,4 +16,4 @@ identity :: [a] -> [a]
 identity xs = foldr (:) [] xs
 
 append :: [a] -> [a] -> [a]
-append xs ys = foldr (++) ys xs
+append xs ys = foldr (:) ys xs
