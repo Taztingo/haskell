@@ -47,3 +47,8 @@ myTakeWhile2 _ [] = []
 myTakeWhile2 f xs = foldr step [] xs
     where step x ys | f x = x : ys
                     | otherwise = []
+
+myAny :: (a -> Bool) -> [a] -> Bool
+myAny _ [] = False
+myAny f xs = foldr step False xs
+    where step a b = f a || b
