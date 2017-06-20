@@ -36,3 +36,14 @@ asInt_fold [] = 0
 myConcat :: [[a]] -> [a]
 myConcat [] = []
 myConcat xs = foldr (++) [] xs
+
+myTakeWhile :: (a -> Bool) -> [a] -> [a]
+myTakeWhile _ [] = []
+myTakeWhile f (x:xs) | f x = x : myTakeWhile f xs
+                     | otherwise = []
+
+myTakeWhile2 :: (a -> Bool) -> [a] -> [a]
+myTakeWhile2 _ [] = []
+myTakeWhile2 f xs = foldr step [] xs
+    where step x ys | f x = x : ys
+                    | otherwise = []
