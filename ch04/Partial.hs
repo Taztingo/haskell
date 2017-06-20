@@ -7,3 +7,5 @@ square xs = map f xs
 
 square2 :: [Int] -> [Int]
 square2 xs = map (\x -> x*x) xs
+
+isInAny needle haystack = any (isInfixOf needle) haystack
