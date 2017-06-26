@@ -1,5 +1,13 @@
 -- file: ch05/PrettyStub.hs
-import SimpleJSON
+module PrettyStub
+    (
+        Doc(..),
+        text,
+        double,
+        (<>),
+        char,
+        hcat
+    ) where
 
 data Doc = ToBeDefined
             deriving (Show)
@@ -21,3 +29,6 @@ char c = undefined
 
 hcat :: [Doc] -> Doc
 hcat xs = undefined
+
+fsep :: [Doc] -> Doc
+fsep xs = undefined
