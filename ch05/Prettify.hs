@@ -11,7 +11,10 @@ module Prettify
         punctuate,
         text,
         compact,
-        pretty
+        pretty,
+        empty,
+        (</>),
+        fits
     ) where
 
 data Doc = Empty
